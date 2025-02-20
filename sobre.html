@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
 </head>
 <body class="pagina-sobre">
     <header>
@@ -23,7 +28,7 @@
     </header>
 
     <main>
-        <section class="content">
+        <section class="content sobre-nos">
             <div class="text">
                 <h1 class="main-title">Sobre Nós</h1>
                 <p>A String Art tem uma história fascinante que combina arte e matemática. Sua origem remonta ao século XVII, quando foi criada pela educadora Mary Everest Boole como uma forma criativa de ensinar geometria. Anos depois, na década de 1960, a técnica ganhou o coração de artesãos e se tornou um estilo decorativo popular, transformando fios e pregos em arte.</p>
@@ -32,6 +37,23 @@
         </section>
     </main>
 
+    <div class="galeria-container">
+    <div class="galeria">
+        <img src="img/foto1.png" alt="Imagem 1" onclick="abrirImagem(this)">
+        <img src="img/foto2.png" alt="Imagem 2" onclick="abrirImagem(this)">
+        <img src="img/foto3.png" alt="Imagem 3" onclick="abrirImagem(this)">
+        <img src="img/foto4.png" alt="Imagem 4" onclick="abrirImagem(this)">
+        <img src="img/foto5.png" alt="Imagem 5" onclick="abrirImagem(this)">
+        <img src="img/foto6.png" alt="Imagem 6" onclick="abrirImagem(this)">
+        <img src="img/foto7.jpg" alt="Imagem 7" onclick="abrirImagem(this)">
+        <img src="img/foto8.jpg" alt="Imagem 8" onclick="abrirImagem(this)">
+        <img src="img/foto9.jpg" alt="Imagem 9" onclick="abrirImagem(this)">
+    </div>
+</div>
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <img id="imagemAmpliada" src="" alt="Imagem Ampliada">
+    </div>
+
     <footer>
         <div class="social-icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -39,5 +61,6 @@
             <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

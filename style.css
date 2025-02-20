@@ -8,6 +8,7 @@ body {
     background-color: #000000;
     color: white;
     font-family: Arial, sans-serif;
+    position: relative;
 }
 
 header {
@@ -24,8 +25,8 @@ header {
     display: flex;
     gap: 15px;
 }
-/* efeito de crecimento no menu do cabeçalho*/
-.menu a {
+
+.menu a { /* efeito de crecimento no menu do cabeçalho*/
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -37,7 +38,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Alinha o footer com os ícones das mídias sociais */
 footer {
     display: flex;
     justify-content: space-between; /* Faz com que fique na mesma posição que o menu */
@@ -149,8 +149,8 @@ img {
     -webkit-mask-image: radial-gradient(circle, white 50%, transparent 51%);
     mask-image: radial-gradient(circle, white 50%, transparent 51%);
 
-    opacity: 0;
-    transform: scale(0.8);
+    opacity: 1;
+    transform: scale(1);
     transition: opacity 1.5s ease-in-out, transform 0.5s ease-in-out;
     transform-origin: center;
 }
@@ -164,9 +164,99 @@ img:hover {
     transform: scale(1) rotate(360deg);
 }
 
-.pagina-sobre p {
-    margin: 0;
-    padding: 0;
+.sobre-nos .text .main-title {
+    padding-left: 80px; 
 }
 
+.sobre-nos p {
+    margin-top: 15px;   
+    margin-bottom: 15px; 
+
+  }
+
+  .sobre-nos .text p {
+    margin-left: -50px;
+}
+  
+body:not(.pagina-sobre) img:hover {
+    transform: scale(1) rotate(360deg); /* Mantém a rotação na página inicial */
+}
+
+.pagina-sobre img:hover {
+    transform: scale(1.05);  /* Remove a rotação na página sobre */
+}
+
+.galeria-container{
+    display: flex;
+    justify-content: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    border-radius: 0; 
+    z-index: 10; /* Coloca as imagens acima de outros elementos */
+}
+
+.galeria img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 1;
+    position: relative;
+    z-index: 11; 
+    transform: none;
+    transition: transform 0.3s ease-in-out;
+    -webkit-mask-image: none; /* Remove a máscara circular no WebKit */
+    mask-image: none;
+    cursor: pointer;
+}
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.pagina-contatos .social-icons {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 60px; 
+    margin-top: 20px;
+}
+
+.pagina-contatos .contact-item {
+    display: flex;
+    align-items: center; 
+    font-size: 30px;
+  
+}
+
+.pagina-contatos .contact-item i {
+    margin-right: 20px;
+}
 
