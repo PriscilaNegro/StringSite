@@ -1,7 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const image = document.querySelector("img"); // Seleciona a imagem
-    image.classList.add("loaded"); // Adiciona a classe para o efeito de surgimento
+    const image = document.querySelector("img"); 
+    if (image) { 
+      image.classList.add("loaded");
+  }
 });
 
 function typeWriterEffect(element, text, speed) { //efeito das letras h1 e h2
@@ -23,6 +25,9 @@ function typeWriterEffect(element, text, speed) { //efeito das letras h1 e h2
     const subtitle = document.getElementById("subtitle");
     const aboutTitle = document.querySelector(".main-title");
     const contactTitle = document.querySelector(".title");
+    const modelsTitle = document.querySelector(".models-title");
+    const crieContaTitle = document.querySelector(".crieConta-title");
+    const entrarTitle = document.querySelector(".entrar-title");
 
     // Aplica o efeito de digitação apenas se o elemento existir
     if (title) {
@@ -37,6 +42,15 @@ function typeWriterEffect(element, text, speed) { //efeito das letras h1 e h2
     if (contactTitle) {
         setTimeout(() => typeWriterEffect(contactTitle, "Contatos", 100), 500);
     }
+    if (modelsTitle) {
+        setTimeout(() => typeWriterEffect(modelsTitle, "Modelos", 100), 500);
+  }
+    if (crieContaTitle) {
+        setTimeout(() => typeWriterEffect(crieContaTitle, "Crie sua Conta", 100), 500);
+   }
+    if (entrarTitle) {
+      setTimeout(() => typeWriterEffect(entrarTitle, "Entrar", 100), 500);
+}
 });
 
   function abrirImagem(elemento) {

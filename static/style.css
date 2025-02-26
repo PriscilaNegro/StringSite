@@ -174,7 +174,7 @@ img:hover {
 
   }
 
-  .sobre-nos .text p {
+.sobre-nos .text p {
     margin-left: -50px;
 }
   
@@ -253,8 +253,7 @@ body:not(.pagina-sobre) img:hover {
     display: flex;
     align-items: center; 
     font-size: 30px;
-  
-}
+  }
 
 .pagina-contatos .contact-item i {
     margin-right: 20px;
