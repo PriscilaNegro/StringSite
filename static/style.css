@@ -253,9 +253,61 @@ body:not(.pagina-sobre) img:hover {
     display: flex;
     align-items: center; 
     font-size: 30px;
-  }
+}
 
 .pagina-contatos .contact-item i {
     margin-right: 20px;
+}
+
+.modelos-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.modelos-container .modelos-imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 0;  
+    border: none;      
+    box-shadow: none;  
+    mask-image: none;  
+    -webkit-mask-image: none; 
+}
+
+.modelos-container img:hover {
+    transform: scale(1.05)!important; /* Remove rotação e mantém o aumento de tamanho */
+    
+}
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.modelo {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.modelo:hover {
+    transform: scale(1.05);
+}
+
+.modelo img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.modelo p {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
